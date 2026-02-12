@@ -40,11 +40,13 @@ function TechnicalContent() {
                 </h2>
                 <div className="project-list">
                     {languages.map((lang, index) => (
-                        <div key={index} className="project-item">
-                            <span className="project-title" style={{ fontSize: '24px' }}>
-                                {lang.name}
-                            </span>
-                            <span style={{ fontSize: '18px' }}>{lang.level}</span>
+                        <div key={index} className="project-item" style={{ gridTemplateColumns: '1fr auto', gap: '12px' }}>
+                            <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px' }}>
+                                <span className="project-title" style={{ fontSize: '24px' }}>
+                                    {lang.name}
+                                </span>
+                                <span style={{ fontSize: '18px', opacity: 0.7 }}>{lang.level}</span>
+                            </div>
                             <span className="project-tech">{lang.years}</span>
                         </div>
                     ))}
