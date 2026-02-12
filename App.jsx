@@ -5,7 +5,7 @@ function Profile() {
     return (
         <div className="plate profile-plate">
             <div style={{ position: 'relative' }}>
-                <h1 style={{ fontSize: '20px', marginBottom: '4px', fontWeight: '700' }}>Alex Chen</h1>
+                <h1 style={{ fontSize: '20px', marginBottom: '4px', fontWeight: '700' }}>Shreyas Girjapure</h1>
                 <p className="role-title">
                     Financial Systems Architect<br />
                     NY, USA

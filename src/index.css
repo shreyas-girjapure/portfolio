@@ -10,6 +10,16 @@
     --font-mono: 'Courier New', Courier, monospace;
 }
 
+[data-theme="dark"] {
+    --bg-color: #111111;
+    --text-primary: #EEEEEE;
+    --text-secondary: #CCCCCC;
+    --accent-purple: #111111;
+    --accent-orange: #FFD60A;
+    --accent-green: #FFD60A;
+    --border-color: #EEEEEE;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -87,9 +97,16 @@ body {
 }
 
 .contact-plate:hover {
-    opacity: 0.6;
     background: transparent;
     transform: none;
+}
+
+.cv-download {
+    transition: color 0.2s;
+}
+
+.cv-download:hover {
+    color: var(--accent-orange);
 }
 
 .nav-item {
@@ -254,7 +271,7 @@ h2 {
 .sticker {
     position: absolute;
     background-color: var(--bg-color);
-    color: black;
+    color: var(--text-primary);
     font-family: var(--font-sans);
     font-size: 14px;
     font-weight: 700;
@@ -266,7 +283,7 @@ h2 {
     z-index: 10;
     line-height: 1.1;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid var(--text-primary);
 }
 
 .status-sticker {
@@ -279,7 +296,7 @@ h2 {
     display: inline-block;
     margin-top: 24px;
     background-color: var(--accent-green);
-    color: black;
+    color: #000000;
     border-radius: 0; 
     border: none;
 }
@@ -352,6 +369,63 @@ strong {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--accent-orange);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 0;
+    border: none;
+    background: none;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-orange);
+}
+
+.theme-toggle-track {
+    width: 40px;
+    height: 22px;
+    border-radius: 11px;
+    border: 2px solid var(--text-primary);
+    background: transparent;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.theme-toggle-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--text-primary);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+[data-theme="dark"] .theme-toggle-thumb {
+    transform: translateX(18px);
+}
+
+[data-theme="dark"] .theme-toggle-track {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
+
+[data-theme="dark"] .theme-toggle-thumb {
+    background: #111111;
+    transform: translateX(18px);
 }
 
 /* Mobile Top Bar - hidden on desktop */

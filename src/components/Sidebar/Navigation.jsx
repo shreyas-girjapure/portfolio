@@ -31,7 +31,7 @@ function Navigation({ activeView, setActiveView }) {
             <div className="mt-auto">
                 <div className="flex-row" style={{ 
                     marginTop: '24px', 
-                    border: '2px solid black', 
+                    border: '2px solid var(--text-primary)', 
                     padding: '12px' 
                 }}>
                     <span style={{ fontSize: '14px', fontWeight: '700' }}>

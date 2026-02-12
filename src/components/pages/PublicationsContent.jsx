@@ -73,7 +73,7 @@ function PublicationsContent() {
                 </div>
             </div>
 
-            <div style={{ marginTop: '80px', padding: '30px', border: '2px solid black' }}>
+            <div style={{ marginTop: '80px', padding: '30px', border: '2px solid var(--text-primary)' }}>
                 <h2 style={{ fontSize: '18px', marginBottom: '16px' }}>
                     Research Interests
                 </h2>
