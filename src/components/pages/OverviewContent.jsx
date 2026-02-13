@@ -1,6 +1,7 @@
 import PageHeader from '../common/PageHeader';
 import ProjectItem from '../common/ProjectItem';
 import Divider from '../common/Divider';
+import ExternalLinkIcon from '../common/ExternalLinkIcon';
 
 function OverviewContent() {
     const experience = [
@@ -68,7 +69,7 @@ function OverviewContent() {
                                         rel="noopener noreferrer"
                                         style={{ textDecoration: 'none', color: 'inherit', opacity: 0.7 }}
                                     >
-                                        {item.company} <span style={{ fontSize: '11px', opacity: 0.6, fontFamily: 'Arial, sans-serif' }}>↗</span>
+                                        {item.company}<ExternalLinkIcon size={11} opacity={0.6} />
                                     </a>
                                 </span>
                                 <span className="project-tech" style={{ whiteSpace: 'nowrap' }}>{item.tech}</span>

@@ -1,4 +1,5 @@
 import ThemeToggle from '../common/ThemeToggle';
+import ExternalLinkIcon from '../common/ExternalLinkIcon';
 
 function ContactButton() {
     return (
@@ -22,7 +23,7 @@ function ContactButton() {
                         rel="noopener noreferrer"
                         style={{ fontWeight: '600', fontSize: '13px', textDecoration: 'none', color: 'inherit', opacity: 0.8 }}
                     >
-                        LinkedIn <span style={{ fontSize: '11px', opacity: 0.5, fontFamily: 'Arial, sans-serif' }}>↗</span>
+                        LinkedIn<ExternalLinkIcon size={11} opacity={0.5} />
                     </a>
                     <a 
                         href="https://github.com/shreyas-girjapure" 
@@ -30,7 +31,7 @@ function ContactButton() {
                         rel="noopener noreferrer"
                         style={{ fontWeight: '600', fontSize: '13px', textDecoration: 'none', color: 'inherit', opacity: 0.8 }}
                     >
-                        GitHub <span style={{ fontSize: '11px', opacity: 0.5, fontFamily: 'Arial, sans-serif' }}>↗</span>
+                        GitHub<ExternalLinkIcon size={11} opacity={0.5} />
                     </a>
                 </div>
             </div>

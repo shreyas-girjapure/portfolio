@@ -1,3 +1,5 @@
+import SparkleIcon from '../common/SparkleIcon';
+
 function Profile() {
     return (
         <div className="plate profile-plate">
@@ -11,7 +13,7 @@ function Profile() {
                     Pune, India
                 </p>
                 <div className="sticker status-sticker">
-                    Open for<br />Opportunities <span style={{ fontFamily: 'Arial, sans-serif' }}>✳</span>
+                    Open for<br />Opportunities <SparkleIcon size={11} />
                 </div>
             </div>
         </div>

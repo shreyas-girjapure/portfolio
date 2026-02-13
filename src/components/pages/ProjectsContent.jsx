@@ -1,5 +1,6 @@
 import PageHeader from '../common/PageHeader';
 import Divider from '../common/Divider';
+import ExternalLinkIcon from '../common/ExternalLinkIcon';
 
 function H({ children }) {
     return <span className="hl">{children}</span>;
@@ -96,7 +97,7 @@ function ProjectsContent() {
                                 className="project-title" 
                                 style={{ fontSize: '22px', textDecoration: 'none', color: 'inherit' }}
                             >
-                                {engagement.title} <span style={{ fontSize: '13px', opacity: 0.4, fontFamily: 'Arial, sans-serif' }}>↗</span>
+                                {engagement.title}<ExternalLinkIcon size={13} opacity={0.4} />
                             </a>
                             <span className="project-tech">{engagement.period}</span>
                         </div>
@@ -112,7 +113,7 @@ function ProjectsContent() {
                 ))}
             </div>
 
-            <Divider height="4px" />
+                                    {project.title}<ExternalLinkIcon size={14} opacity={0.5} />
 
             <div style={{ marginTop: '40px' }}>
                 <h2 style={{ fontSize: '18px', marginBottom: '24px' }}>

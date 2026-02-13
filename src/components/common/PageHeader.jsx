@@ -2,7 +2,7 @@ function PageHeader({ title, subtitle }) {
     return (
         <>
             <div className="sticker clearance-sticker">
-                SF<br />CERTIFIED
+                <span className="clearance-sticker-text">SF<br />CERTIFIED</span>
             </div>
 
             <div style={{ 
