@@ -4,9 +4,27 @@ import Divider from '../common/Divider';
 
 function OverviewContent() {
     const experience = [
-        { year: '2024', title: 'Senior Software Engineer — Merkle', tech: 'CURRENT' },
-        { year: '2021', title: 'Engineering Lead — Persistent Systems', tech: '2021–2024' },
-        { year: '2018', title: 'Associate Technical Consultant — Perficient', tech: '2018–2021' }
+        { 
+            year: '2024', 
+            title: 'Senior Software Engineer', 
+            company: 'Merkle', 
+            url: 'https://www.merkle.com', 
+            tech: 'CURRENT' 
+        },
+        { 
+            year: '2021', 
+            title: 'Engineering Lead', 
+            company: 'Persistent Systems', 
+            url: 'https://www.persistent.com', 
+            tech: '2021–2024' 
+        },
+        { 
+            year: '2018', 
+            title: 'Associate Technical Consultant', 
+            company: 'Perficient', 
+            url: 'https://www.perficient.com', 
+            tech: '2018–2021' 
+        }
     ];
 
     const competencies = [
@@ -40,12 +58,22 @@ function OverviewContent() {
                 
                 <div className="project-list">
                     {experience.map((item, index) => (
-                        <ProjectItem
-                            key={index}
-                            year={item.year}
-                            title={item.title}
-                            tech={item.tech}
-                        />
+                        <div key={index} className="project-item" style={{ gridTemplateColumns: '80px 1fr' }}>
+                            <span className="project-year">{item.year}</span>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
+                                <span className="project-title">
+                                    {item.title} — <a 
+                                        href={item.url} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        style={{ textDecoration: 'none', color: 'inherit', opacity: 0.7 }}
+                                    >
+                                        {item.company} <span style={{ fontSize: '11px', opacity: 0.6 }}>&#8599;</span>
+                                    </a>
+                                </span>
+                                <span className="project-tech" style={{ whiteSpace: 'nowrap' }}>{item.tech}</span>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

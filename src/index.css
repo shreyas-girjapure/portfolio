@@ -389,6 +389,11 @@ ul.bordered-list li {
     border: none !important;
 }
 
+.hl {
+    border-bottom: 3px solid var(--accent-orange);
+    font-style: italic;
+}
+
 .highlight-list .hl {
     border-bottom: 3px solid var(--accent-orange);
     font-style: italic;

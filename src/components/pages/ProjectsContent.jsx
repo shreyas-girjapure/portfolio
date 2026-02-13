@@ -12,6 +12,7 @@ function ProjectsContent() {
             title: 'CS Energy — Sales Cloud, OmniStudio', 
             url: 'https://www.csenergy.com',
             role: 'Senior Software Engineer @ Merkle',
+            roleUrl: 'https://www.merkle.com',
             highlights: [
                 <>Managing development and enhancement for <H>CS Sales Cloud</H></>,
                 <>Responsible for full <H>Development and Deployment Cycle</H></>,
@@ -26,6 +27,7 @@ function ProjectsContent() {
             title: 'IDFC BBG — Financial Services Cloud, Community Cloud', 
             url: 'https://www.idfcfirstbank.com',
             role: 'Engineering Lead @ Persistent Systems, Pune',
+            roleUrl: 'https://www.persistent.com',
             highlights: [
                 <>Led <H>digital transformation</H> of banking offline workflows — Case Onboarding, Case Management, E-Sign &amp; E-Stamp</>,
                 <>Reduced RM to CM turnaround time from <H>1 day → 30 minutes</H></>,
@@ -41,6 +43,7 @@ function ProjectsContent() {
             title: 'BCBSMA — Sales Cloud, Health Cloud, OmniStudio', 
             url: 'https://www.bluecrossma.org',
             role: 'Associate Technical Consultant @ Perficient, Nagpur',
+            roleUrl: 'https://www.perficient.com',
             highlights: [
                 <><H>Offshore Team Lead</H> for the engagement</>,
                 <>Delivered <H>Classic to Lightning Migration</H> journey</>,
@@ -54,6 +57,7 @@ function ProjectsContent() {
             title: 'Techtronic — Sales Cloud', 
             url: 'https://www.ttigroup.com',
             role: 'Associate Technical Consultant @ Perficient',
+            roleUrl: 'https://www.perficient.com',
             highlights: [
                 <>Salesforce <H>Sales Cloud</H> implementation and customization</>,
                 <>Production-ready delivery and deployment support</>
@@ -92,7 +96,7 @@ function ProjectsContent() {
                                 className="project-title" 
                                 style={{ fontSize: '22px', textDecoration: 'none', color: 'inherit' }}
                             >
-                                {engagement.title} <span style={{ fontSize: '13px', opacity: 0.4 }}>↗</span>
+                                {engagement.title} <span style={{ fontSize: '13px', opacity: 0.4 }}>&#8599;</span>
                             </a>
                             <span className="project-tech">{engagement.period}</span>
                         </div>
@@ -126,7 +130,7 @@ function ProjectsContent() {
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <span className="project-title" style={{ fontSize: '20px' }}>
-                                    {project.title} <span style={{ fontSize: '14px', opacity: 0.5 }}>↗</span>
+                                    {project.title} <span style={{ fontSize: '14px', opacity: 0.5 }}>&#8599;</span>
                                 </span>
                             </div>
                             <p style={{ fontSize: '14px', opacity: '0.7', lineHeight: '1.5' }}>

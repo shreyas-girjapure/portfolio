@@ -129,19 +129,19 @@ function PublicationsContent() {
                 </div>
             </div>
 
-            <div style={{ marginTop: '40px', padding: '30px', border: '2px solid var(--text-primary)' }}>
-                <h2 style={{ fontSize: '18px', marginBottom: '16px' }}>
+            <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid var(--text-primary)' }}>
+                <h2 style={{ fontSize: '18px', marginBottom: '20px', opacity: 0.9 }}>
                     Architect Roadmap — Next Goals
                 </h2>
                 <ul style={{ listStyle: 'none', paddingLeft: '0' }}>
                     {architectGoals.map((goal, index) => (
-                        <li key={index} style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                            ◆ {goal}
+                        <li key={index} style={{ fontSize: '16px', lineHeight: '1.9', opacity: 0.8 }}>
+                            {goal}
                         </li>
                     ))}
                 </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.6', marginTop: '20px', opacity: 0.8 }}>
-                    Actively working toward becoming a Salesforce Technical Architect — 
+                <p style={{ fontSize: '15px', lineHeight: '1.6', marginTop: '20px', opacity: 0.7, fontStyle: 'italic' }}>
+                    Actively working toward becoming a <span className="hl">Salesforce Technical Architect</span> — 
                     combining deep platform expertise with solution design and enterprise integration skills.
                 </p>
             </div>
