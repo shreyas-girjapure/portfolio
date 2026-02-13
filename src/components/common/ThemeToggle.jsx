@@ -4,6 +4,10 @@ function ThemeToggle() {
     const [dark, setDark] = useState(() => {
         const saved = localStorage.getItem('theme');
         if (saved) return saved === 'dark';
+
+        const isMobileBrowser = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+        if (isMobileBrowser) return false;
+
         return window.matchMedia('(prefers-color-scheme: dark)').matches;
     });
 
