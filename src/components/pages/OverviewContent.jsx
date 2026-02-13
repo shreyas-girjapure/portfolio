@@ -68,7 +68,7 @@ function OverviewContent() {
                                         rel="noopener noreferrer"
                                         style={{ textDecoration: 'none', color: 'inherit', opacity: 0.7 }}
                                     >
-                                        {item.company} <span style={{ fontSize: '11px', opacity: 0.6 }}>&#8599;</span>
+                                        {item.company} <span style={{ fontSize: '11px', opacity: 0.6, fontFamily: 'Arial, sans-serif' }}>↗</span>
                                     </a>
                                 </span>
                                 <span className="project-tech" style={{ whiteSpace: 'nowrap' }}>{item.tech}</span>

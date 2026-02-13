@@ -22,7 +22,7 @@ function ContactButton() {
                         rel="noopener noreferrer"
                         style={{ fontWeight: '600', fontSize: '13px', textDecoration: 'none', color: 'inherit', opacity: 0.8 }}
                     >
-                        LinkedIn &#8599;
+                        LinkedIn <span style={{ fontSize: '11px', opacity: 0.5, fontFamily: 'Arial, sans-serif' }}>↗</span>
                     </a>
                     <a 
                         href="https://github.com/shreyas-girjapure" 
@@ -30,7 +30,7 @@ function ContactButton() {
                         rel="noopener noreferrer"
                         style={{ fontWeight: '600', fontSize: '13px', textDecoration: 'none', color: 'inherit', opacity: 0.8 }}
                     >
-                        GitHub &#8599;
+                        GitHub <span style={{ fontSize: '11px', opacity: 0.5, fontFamily: 'Arial, sans-serif' }}>↗</span>
                     </a>
                 </div>
             </div>

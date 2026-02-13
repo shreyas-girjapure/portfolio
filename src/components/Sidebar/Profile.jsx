@@ -11,7 +11,7 @@ function Profile() {
                     Pune, India
                 </p>
                 <div className="sticker status-sticker">
-                    Open for<br />Opportunities ✳
+                    Open for<br />Opportunities <span style={{ fontFamily: 'Arial, sans-serif' }}>✳</span>
                 </div>
             </div>
         </div>

@@ -96,7 +96,7 @@ function ProjectsContent() {
                                 className="project-title" 
                                 style={{ fontSize: '22px', textDecoration: 'none', color: 'inherit' }}
                             >
-                                {engagement.title} <span style={{ fontSize: '13px', opacity: 0.4 }}>&#8599;</span>
+                                {engagement.title} <span style={{ fontSize: '13px', opacity: 0.4, fontFamily: 'Arial, sans-serif' }}>↗</span>
                             </a>
                             <span className="project-tech">{engagement.period}</span>
                         </div>
@@ -130,7 +130,7 @@ function ProjectsContent() {
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <span className="project-title" style={{ fontSize: '20px' }}>
-                                    {project.title} <span style={{ fontSize: '14px', opacity: 0.5 }}>&#8599;</span>
+                                    {project.title} <span style={{ fontSize: '14px', opacity: 0.5, fontFamily: 'Arial, sans-serif' }}>↗</span>
                                 </span>
                             </div>
                             <p style={{ fontSize: '14px', opacity: '0.7', lineHeight: '1.5' }}>
