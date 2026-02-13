@@ -299,6 +299,14 @@ h2 {
     color: #000000;
     border-radius: 0; 
     border: none;
+    animation: subtle-shake 4s ease-in-out infinite;
+}
+
+@keyframes subtle-shake {
+    0%, 100% { transform: rotate(4deg); }
+    25% { transform: rotate(5.5deg) translateX(1px); }
+    50% { transform: rotate(3deg) translateX(-1px); }
+    75% { transform: rotate(5deg) translateX(0.5px); }
 }
 
 .clearance-sticker {
@@ -358,10 +366,59 @@ h2 {
     width: 100%;
 }
 
-ul li {
+ul.bordered-list li {
     font-size: 18px !important;
     border-bottom: 2px solid var(--text-primary) !important;
     padding: 12px 0 !important;
+}
+
+/* Compact highlight list for experience cards */
+.highlight-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.highlight-list li {
+    font-size: 15px;
+    line-height: 1.55;
+    padding: 3px 0;
+    position: relative;
+    color: var(--text-primary);
+    opacity: 0.85;
+    border: none !important;
+}
+
+.highlight-list .hl {
+    border-bottom: 3px solid var(--accent-orange);
+    font-style: italic;
+}
+
+/* Engagement card */
+.engagement-card {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--text-primary);
+}
+
+.engagement-card:last-child {
+    border-bottom: none;
+}
+
+.engagement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.engagement-role {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 12px;
+    font-style: italic;
 }
 
 strong {
@@ -636,9 +693,13 @@ strong {
         margin: 30px 0;
     }
 
-    ul li {
+    ul.bordered-list li {
         font-size: 16px !important;
         padding: 10px 0 !important;
+    }
+
+    .highlight-list li {
+        font-size: 14px;
     }
 
     /* Stack two-column layouts */

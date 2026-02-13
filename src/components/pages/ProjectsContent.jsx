@@ -1,130 +1,138 @@
 import PageHeader from '../common/PageHeader';
 import Divider from '../common/Divider';
 
+function H({ children }) {
+    return <span className="hl">{children}</span>;
+}
+
 function ProjectsContent() {
-    const allProjects = [
+    const engagements = [
         { 
-            year: '2023', 
-            title: 'Citadel Settlement Engine', 
-            tech: 'RUST / GRPC', 
-            description: 'Real-time settlement system processing 500K+ transactions per second with Byzantine fault tolerance.' 
+            period: '2024 – Present', 
+            title: 'CS Energy — Sales Cloud, OmniStudio', 
+            url: 'https://www.csenergy.com',
+            role: 'Senior Software Engineer @ Merkle',
+            highlights: [
+                <>Managing development and enhancement for <H>CS Sales Cloud</H></>,
+                <>Responsible for full <H>Development and Deployment Cycle</H></>,
+                <>Developed complex business processes for sales and service teams</>,
+                <>Modules: <H>EV Sales</H>, <H>EV Service</H>, <H>Customer Onboarding</H>, <H>Bulk Service Site Management</H></>,
+                <>Orchestrated <H>API integrations</H> (Inbound &amp; Outbound) with multiple vendors</>,
+                <>OmniStudio: <H>OmniScript</H>, <H>Data Mapper</H>, <H>Data Extractor</H>, <H>Integration Procedure</H>, <H>Document Templates</H></>
+            ]
         },
         { 
-            year: '2023', 
-            title: 'Collateral Optimization Engine', 
-            tech: 'C++ / CUDA', 
-            description: 'GPU-accelerated portfolio margin calculations reducing compute time by 87%.' 
+            period: '2021 – 2024', 
+            title: 'IDFC BBG — Financial Services Cloud, Community Cloud', 
+            url: 'https://www.idfcfirstbank.com',
+            role: 'Engineering Lead @ Persistent Systems, Pune',
+            highlights: [
+                <>Led <H>digital transformation</H> of banking offline workflows — Case Onboarding, Case Management, E-Sign &amp; E-Stamp</>,
+                <>Reduced RM to CM turnaround time from <H>1 day → 30 minutes</H></>,
+                <>Helped increase overall loan disbursements from <H>₹50 Crore → ₹300 Crore</H></>,
+                <>Built and delivered <H>5-minute loan disbursement</H> journey for RBI initiative</>,
+                <>EKYC &amp; ESign/EStamp reduced loan processing time from <H>5+ days → hours</H></>,
+                <>Contributed to <H>Trigger Framework</H> and <H>API Integration Framework</H></>,
+                <>Implemented and orchestrated integrations with <H>40+ third-party systems</H></>
+            ]
         },
         { 
-            year: '2022', 
-            title: 'Liquidity Pool Aggregator', 
-            tech: 'SOLIDITY / PYTHON', 
-            description: 'Multi-DEX routing protocol managing $2B+ in cross-chain liquidity.' 
+            period: '2019 – 2021', 
+            title: 'BCBSMA — Sales Cloud, Health Cloud, OmniStudio', 
+            url: 'https://www.bluecrossma.org',
+            role: 'Associate Technical Consultant @ Perficient, Nagpur',
+            highlights: [
+                <><H>Offshore Team Lead</H> for the engagement</>,
+                <>Delivered <H>Classic to Lightning Migration</H> journey</>,
+                <>Built community portal for <H>Insurance Onboarding</H> and Management</>,
+                <>Designed solutions for out-of-the-box and custom features</>,
+                <>CPQ module with Vlocity — <H>DataRaptor</H>, <H>Integration Procedures</H>, <H>Pricing</H>, <H>FlexCards</H>, <H>Document Templates</H></>
+            ]
         },
         { 
-            year: '2022', 
-            title: 'Trade Surveillance Platform', 
-            tech: 'KAFKA / SPARK', 
-            description: 'Real-time market abuse detection system analyzing 10M+ events per second.' 
-        },
-        { 
-            year: '2021', 
-            title: 'Dark Pool Order Book', 
-            tech: 'C++ / FPGA', 
-            description: 'Ultra-low latency matching engine with 200 nanosecond median tick-to-trade.' 
-        },
-        { 
-            year: '2021', 
-            title: 'Smart Order Router', 
-            tech: 'RUST / TOKIO', 
-            description: 'Multi-venue execution system optimizing for price improvement and fill rates.' 
-        },
-        { 
-            year: '2021', 
-            title: 'Blockchain Oracle Network', 
-            tech: 'GO / LIBP2P', 
-            description: 'Decentralized price feed infrastructure with cryptographic verification.' 
-        },
-        { 
-            year: '2020', 
-            title: 'Risk Analysis Dashboard', 
-            tech: 'REACT / D3', 
-            description: 'Real-time portfolio risk visualization with stress testing and scenario analysis.' 
-        },
-        { 
-            year: '2020', 
-            title: 'Credit Derivatives Pricer', 
-            tech: 'PYTHON / NUMPY', 
-            description: 'Monte Carlo simulation engine for CDO tranche valuation.' 
-        },
-        { 
-            year: '2019', 
-            title: 'Market Data Normalizer', 
-            tech: 'RUST / ARROW', 
-            description: 'High-throughput feed handler processing normalized tick data from 50+ venues.' 
-        },
-        { 
-            year: '2019', 
-            title: 'Automated Market Maker', 
-            tech: 'SOLIDITY / HARDHAT', 
-            description: 'Constant function AMM protocol with concentrated liquidity positions.' 
-        },
-        { 
-            year: '2018', 
-            title: 'Regulatory Reporting System', 
-            tech: 'JAVA / ELASTICSEARCH', 
-            description: 'Automated EMIR and Dodd-Frank transaction reporting platform.' 
+            period: '2018 – 2019', 
+            title: 'Techtronic — Sales Cloud', 
+            url: 'https://www.ttigroup.com',
+            role: 'Associate Technical Consultant @ Perficient',
+            highlights: [
+                <>Salesforce <H>Sales Cloud</H> implementation and customization</>,
+                <>Production-ready delivery and deployment support</>
+            ]
         }
+    ];
+
+    const personalProjects = [
+        { title: 'Salesforce CI/CD Pipeline', description: 'Automated deployment pipeline for Salesforce orgs using GitHub Actions and SFDX', url: 'https://github.com/shreyas-girjapure/Salesforce-Pipeline' },
+        { title: 'Orphan-Node-Identifier', description: 'Tool to identify orphan metadata nodes in Salesforce org configurations', url: 'https://github.com/shreyas-girjapure/Orphan-Node-Identifier' },
+        { title: 'Salesforce-CLI-RAG-Bot', description: 'AI-powered RAG bot for Salesforce CLI documentation and troubleshooting', url: 'https://github.com/shreyas-girjapure/Salesforce-CLI-RAG-Bot' }
     ];
 
     return (
         <main className="plate content-sheet">
             <PageHeader 
-                title="Project Portfolio" 
-                subtitle="12 Projects ✹" 
+                title="Experience Portfolio" 
+                subtitle="7+ Years ✹" 
             />
 
             <p className="intro-text" style={{ fontSize: '36px', marginBottom: '60px' }}>
-                A selection of <span>production systems</span> deployed at scale across 
-                trading firms, hedge funds, and decentralized protocols.
+                Delivering <span>enterprise Salesforce implementations</span> across Energy, 
+                Banking, Insurance, and Healthcare domains.
             </p>
 
             <Divider height="4px" />
 
             <div style={{ marginTop: '40px' }}>
+                {engagements.map((engagement, index) => (
+                    <div key={index} className="engagement-card">
+                        <div className="engagement-header">
+                            <a 
+                                href={engagement.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="project-title" 
+                                style={{ fontSize: '22px', textDecoration: 'none', color: 'inherit' }}
+                            >
+                                {engagement.title} <span style={{ fontSize: '13px', opacity: 0.4 }}>↗</span>
+                            </a>
+                            <span className="project-tech">{engagement.period}</span>
+                        </div>
+                        <p className="engagement-role">
+                            {engagement.role}
+                        </p>
+                        <ul className="highlight-list">
+                            {engagement.highlights.map((point, i) => (
+                                <li key={i}>{point}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+
+            <Divider height="4px" />
+
+            <div style={{ marginTop: '40px' }}>
+                <h2 style={{ fontSize: '18px', marginBottom: '24px' }}>
+                    Personal Projects
+                </h2>
                 <div className="project-list">
-                    {allProjects.map((project, index) => (
-                        <div 
+                    {personalProjects.map((project, index) => (
+                        <a 
                             key={index} 
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="project-item" 
-                            style={{ 
-                                gridTemplateColumns: '80px 1fr', 
-                                gridTemplateRows: 'auto auto', 
-                                rowGap: '12px' 
-                            }}
+                            style={{ gridTemplateColumns: '1fr', rowGap: '4px', textDecoration: 'none', color: 'inherit' }}
                         >
-                            <span className="project-year" style={{ gridRow: '1 / 3' }}>
-                                {project.year}
-                            </span>
-                            <div style={{ 
-                                display: 'flex', 
-                                justifyContent: 'space-between', 
-                                alignItems: 'center' 
-                            }}>
-                                <span className="project-title" style={{ fontSize: '24px' }}>
-                                    {project.title}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <span className="project-title" style={{ fontSize: '20px' }}>
+                                    {project.title} <span style={{ fontSize: '14px', opacity: 0.5 }}>↗</span>
                                 </span>
-                                <span className="project-tech">{project.tech}</span>
                             </div>
-                            <p style={{ 
-                                fontSize: '16px', 
-                                opacity: '0.8', 
-                                lineHeight: '1.5', 
-                                gridColumn: '2' 
-                            }}>
+                            <p style={{ fontSize: '14px', opacity: '0.7', lineHeight: '1.5' }}>
                                 {project.description}
                             </p>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>

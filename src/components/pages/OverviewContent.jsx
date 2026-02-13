@@ -3,47 +3,48 @@ import ProjectItem from '../common/ProjectItem';
 import Divider from '../common/Divider';
 
 function OverviewContent() {
-    const projects = [
-        { year: '2023', title: 'Citadel Settlement Engine', tech: 'RUST / GRPC' },
-        { year: '2022', title: 'Liquidity Pool Aggregator', tech: 'SOLIDITY / PYTHON' },
-        { year: '2021', title: 'Dark Pool Order Book', tech: 'C++ / FPGA' },
-        { year: '2020', title: 'Risk Analysis Dashboard', tech: 'REACT / D3' }
+    const experience = [
+        { year: '2024', title: 'Senior Software Engineer — Merkle', tech: 'CURRENT' },
+        { year: '2021', title: 'Engineering Lead — Persistent Systems', tech: '2021–2024' },
+        { year: '2018', title: 'Associate Technical Consultant — Perficient', tech: '2018–2021' }
     ];
 
     const competencies = [
-        'Distributed Systems Architecture',
-        'Market Data Ingestion',
-        'Cryptography & Consensus',
-        'Automated Compliance Auditing'
+        'Salesforce Architecture & Design',
+        'CRM Cloud Implementations',
+        'API Integration & Orchestration',
+        'OmniStudio (OmniScript, FlexCards, Data Mapper)',
+        'CI/CD & DevOps for Salesforce',
+        'Digital Transformation & Process Automation'
     ];
 
     return (
         <main className="plate content-sheet">
             <PageHeader 
-                title="Financial Infrastructure" 
-                subtitle="Updated: Oct 2023 ✹" 
+                title="Salesforce Engineering" 
+                subtitle="Updated: Feb 2026 ✹" 
             />
 
             <p className="intro-text">
-                I engineer <span>high-frequency trading systems</span> and secure ledger 
-                architectures for the financial sector. Focusing on sub-millisecond latency, 
-                fault tolerance, and institutional-grade security protocols.
+                I build and architect <span>enterprise Salesforce solutions</span> — from Sales Cloud 
+                and Financial Services Cloud to OmniStudio and complex API integrations. 
+                7+ years delivering digital transformations that drive measurable business impact.
             </p>
 
             <Divider height="4px" />
 
             <div style={{ marginBottom: '60px' }}>
                 <h2 style={{ fontSize: '18px', marginBottom: '20px' }}>
-                    Selected Engineering
+                    Career Timeline
                 </h2>
                 
                 <div className="project-list">
-                    {projects.map((project, index) => (
+                    {experience.map((item, index) => (
                         <ProjectItem
                             key={index}
-                            year={project.year}
-                            title={project.title}
-                            tech={project.tech}
+                            year={item.year}
+                            title={item.title}
+                            tech={item.tech}
                         />
                     ))}
                 </div>
@@ -52,7 +53,7 @@ function OverviewContent() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px' }}>
                 <div>
                     <h2 style={{ fontSize: '18px' }}>Core Competencies</h2>
-                    <ul style={{ listStyle: 'none', marginTop: '16px' }}>
+                    <ul className="bordered-list" style={{ listStyle: 'none', marginTop: '16px' }}>
                         {competencies.map((competency, index) => (
                             <li key={index}>{competency}</li>
                         ))}
@@ -60,7 +61,7 @@ function OverviewContent() {
                 </div>
                 
                 <div>
-                    <h2 style={{ fontSize: '18px' }}>Tech Stack</h2>
+                    <h2 style={{ fontSize: '18px' }}>Impact Highlights</h2>
                     <p style={{ 
                         fontFamily: 'var(--font-sans)', 
                         fontSize: '22px', 
@@ -68,9 +69,10 @@ function OverviewContent() {
                         marginTop: '16px', 
                         color: 'var(--text-primary)' 
                     }}>
-                        Primary proficiency in <strong>Rust</strong> and <strong>C++</strong> for 
-                        execution layers. <strong>TypeScript/React</strong> for visualization dashboards. 
-                        Experienced with Kafka message queues and PostgreSQL timeseries optimization.
+                        Increased loan disbursements from <strong>₹50 Cr to ₹300 Cr</strong>. 
+                        Reduced RM-to-CM turnaround from <strong>1 day to 30 minutes</strong>. 
+                        Orchestrated integrations across <strong>40+ third-party systems</strong>. 
+                        Delivered <strong>5-minute loan disbursement</strong> journey for RBI initiative.
                     </p>
                 </div>
             </div>

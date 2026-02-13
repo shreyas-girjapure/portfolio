@@ -1,7 +1,7 @@
 # Portfolio Site - Copilot Instructions
 
 ## Project Overview
-Professional portfolio website for Shreyas Girjapure - Financial Systems Architect
+Professional portfolio website for Shreyas Girjapure - Lead Software Engineer / Salesforce Architect (Aspiring)
 
 ## Tech Stack
 - Vite

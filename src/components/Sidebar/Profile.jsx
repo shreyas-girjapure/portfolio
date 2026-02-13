@@ -6,11 +6,12 @@ function Profile() {
                     Shreyas Girjapure
                 </h1>
                 <p className="role-title">
-                    Financial Systems Architect<br />
-                    NY, USA
+                    Lead Software Engineer<br />
+                    Salesforce Architect (Aspiring)<br />
+                    Pune, India
                 </p>
                 <div className="sticker status-sticker">
-                    Open for<br />Contract ✳
+                    Open for<br />Opportunities ✳
                 </div>
             </div>
         </div>

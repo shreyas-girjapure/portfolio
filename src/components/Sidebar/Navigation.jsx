@@ -3,9 +3,9 @@ import NavItem from './NavItem';
 function Navigation({ activeView, setActiveView }) {
     const navItems = [
         { id: 'overview', label: 'Overview', count: '01' },
-        { id: 'projects', label: 'Projects', count: '12' },
-        { id: 'technical', label: 'Technical Stack', count: '08' },
-        { id: 'publications', label: 'Publications', count: '04' }
+        { id: 'projects', label: 'Experience', count: '03' },
+        { id: 'technical', label: 'Technical Stack', count: '10' },
+        { id: 'publications', label: 'Certifications', count: '05' }
     ];
 
     return (

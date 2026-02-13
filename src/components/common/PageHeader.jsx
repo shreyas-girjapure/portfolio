@@ -2,7 +2,7 @@ function PageHeader({ title, subtitle }) {
     return (
         <>
             <div className="sticker clearance-sticker">
-                SECURE<br />ACCESS
+                SF<br />CERTIFIED
             </div>
 
             <div style={{ 
