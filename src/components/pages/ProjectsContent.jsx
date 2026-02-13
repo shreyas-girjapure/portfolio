@@ -113,8 +113,6 @@ function ProjectsContent() {
                 ))}
             </div>
 
-                                    {project.title}<ExternalLinkIcon size={14} opacity={0.5} />
-
             <div style={{ marginTop: '40px' }}>
                 <h2 style={{ fontSize: '18px', marginBottom: '24px' }}>
                     Personal Projects
