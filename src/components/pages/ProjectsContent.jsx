@@ -129,7 +129,7 @@ function ProjectsContent() {
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <span className="project-title" style={{ fontSize: '20px' }}>
-                                    {project.title} <span style={{ fontSize: '14px', opacity: 0.5, fontFamily: 'Arial, sans-serif' }}>↗</span>
+                                    {project.title}<ExternalLinkIcon size={14} opacity={0.5} />
                                 </span>
                             </div>
                             <p style={{ fontSize: '14px', opacity: '0.7', lineHeight: '1.5' }}>
