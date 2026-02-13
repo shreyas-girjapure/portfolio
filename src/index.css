@@ -623,15 +623,20 @@ strong {
     .sidebar {
         position: fixed;
         top: 0;
+        bottom: 0;
         right: -100%;
         width: 280px;
-        height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
         background: var(--bg-color);
         z-index: 200;
         border-right: none;
         border-left: 2px solid var(--text-primary);
-        padding: 24px 20px;
+        padding: 24px 20px calc(20px + env(safe-area-inset-bottom));
         overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
         transition: right 0.3s ease;
     }
 
@@ -663,6 +668,18 @@ strong {
         margin-top: 10px;
         padding: 16px 0;
         justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-plate > div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contact-plate .theme-toggle {
+        align-self: flex-start;
     }
 
     /* Content gets full space */
